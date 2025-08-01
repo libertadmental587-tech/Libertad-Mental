@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Libertad Mental</title>
+  <link rel="icon" href="logo of sin fondo.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: serif;
+      background-color: #e6ccff;
+      color: #000;
+    }
+
+    nav {
+      background-color: #4b0082;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      display: none;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .active {
+      display: block;
+    }
+
+    header {
+      background-color: #d1b3ff;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 4px solid #b388ff;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #4b0082;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-top: 15px;
+    }
+
+    h2 {
+      color: #5a2d82;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .links a {
+      display: block;
+      margin: 10px 0;
+      color: #4b0082;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .contacto {
+      background-color: #f3e5ff;
+      padding: 30px 20px;
+      margin-top: 40px;
+      border-top: 2px solid #b388ff;
+      color: #4b0082;
+    }
+
+    .contacto a {
+      color: #4b0082;
+      text-decoration: none;
+    }
+
+    .contacto a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll(".section");
+      sections.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    window.onload = () => {
+      showSection('inicio');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Libertad Mental</h1>
+    <img src="logo of sin fondo.png" alt="Logo Libertad Mental" class="logo">
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="#" onclick="showSection('inicio')">Inicio</a>
+    <a href="#" onclick="showSection('quienes')">Quiénes somos</a>
+    <a href="#" onclick="showSection('documentos')">Documentos</a>
+    <a href="#" onclick="showSection('contacto')">Contáctanos</a>
+  </nav>
+
+  <!-- Sección Inicio -->
+  <div id="inicio" class="section active">
+    <h2>Bienvenido a Libertad Mental</h2>
+    <p>Un espacio para compartir conocimientos, recursos y apoyo sobre salud mental.</p>
+  </div>
+
+  <!-- Sección Quiénes somos -->
+  <div id="quienes" class="section">
+    <h2>¿Quiénes somos?</h2>
+    <p><strong>¿Quiénes somos?</strong><br>
+    Somos una comunidad juvenil que promueve el cuidado de la salud mental.</p>
+  </div>
+
+  <!-- Sección Documentos -->
+  <div id="documentos" class="section">
+    <h2>Documentos sobre Salud Mental</h2>
+    <div class="links">
+      <a href="https://iris.paho.org/bitstream/handle/10665.2/57878/9789275327715_spa.pdf" target="_blank">📄 Salud mental OPS</a>
+      <a href="https://www.researchgate.net/publication/346678057_Salud_mental_y_psicologia" target="_blank">📄 Salud mental y psicología (ResearchGate)</a>
+      <a href="https://aedrh.org/wp-content/uploads/2024/02/Libro-Blanco_07-02-2024_.pdf" target="_blank">📄 Libro Blanco AEDRH</a>
+      <a href="http://www.biblioteca.cij.gob.mx/Archivos/Materiales_de_consulta/Drogas_de_Abuso/Articulos/LibroSaludMentalCuidados.pdf" target="_blank">📄 Salud Mental y Cuidados (CIJ)</a>
+      <a href="https://dialnet.unirioja.es/descarga/libro/978738.pdf" target="_blank">📄 Dialnet - Salud Mental</a>
+      <a href="https://ayudacontextos.wordpress.com/wp-content/uploads/2018/04/psicologia-medica-y-salud-mental2.pdf" target="_blank">📄 Psicología médica y salud mental</a>
+    </div>
+  </div>
+
+  <!-- Sección Contacto -->
+  <div id="contacto" class="section">
+    <h2>Contáctanos</h2>
+    <div class="contacto">
+      <p>Instagram: <a href="https://instagram.com/libertad_.mental" target="_blank">@libertad_.mental</a></p>
+      <p>Teléfono: 4269 1030</p>
+      <p>Correo: <a href="mailto:abicita1417@gmail.com">abicita1417@gmail.com</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
